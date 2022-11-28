@@ -1,0 +1,138 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1669623089737' stop='1669623089768'>
+    <name>Bootcamp E2E: Internet shop logo button</name>
+    <title>Bootcamp E2E: Internet shop logo button</title>
+    <test-cases>
+        <test-case start='1669623089737' status='passed' stop='1669623089738'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1669623089738' status='broken' stop='1669623089757'>
+            <name>Given The User is on the home page</name>
+            <title>Given The User is on the home page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps>
+                <step start='1669623089740' status='broken' stop='1669623089757'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='dea9ecb5-189b-4f20-9ea4-7cb2743e839f-attachment.json' type='application/json' size='38'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: function uses multiple asynchronous interfaces: callback and promise</message>
+                <stack-trace>Error: function uses multiple asynchronous interfaces: callback and promise
+                to use the callback interface: do not return a promise
+                to use the promise interface: remove the last argument to the function
+                    at Object.run (D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\node_modules\@cucumber\cucumber\lib\user_code_runner.js:35:24)
+                    at Object.run (D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\node_modules\@cucumber\cucumber\lib\runtime\step_runner.js:52:59)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                    at async TestCaseRunner.invokeStep (D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\node_modules\@cucumber\cucumber\lib\runtime\test_case_runner.js:93:16)
+                    at async TestCaseRunner.runStep (D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\node_modules\@cucumber\cucumber\lib\runtime\test_case_runner.js:237:26)
+                    at async D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\node_modules\@cucumber\cucumber\lib\runtime\test_case_runner.js:163:48
+                    at async TestCaseRunner.aroundTestStep (D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\node_modules\@cucumber\cucumber\lib\runtime\test_case_runner.js:117:32)
+                    at async TestCaseRunner.run (D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\node_modules\@cucumber\cucumber\lib\runtime\test_case_runner.js:146:17)
+                    at async Runtime.runTestCase (D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\node_modules\@cucumber\cucumber\lib\runtime\index.js:41:24)
+                    at async Runtime.start (D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\node_modules\@cucumber\cucumber\lib\runtime\index.js:65:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1669623089758' status='pending' stop='1669623089758'>
+            <name>And the promo banner is closed if it appeared</name>
+            <title>And the promo banner is closed if it appeared</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1669623089758' status='pending' stop='1669623089759'>
+            <name>When the User opens 'Today's Best Deals' tab</name>
+            <title>When the User opens 'Today's Best Deals' tab</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1669623089759' status='broken' stop='1669623089759'>
+            <name>And clicks on the Internet shop logo (top right corner)</name>
+            <title>And clicks on the Internet shop logo (top right corner)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "clicks on the Internet shop logo (top right corner)" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "clicks on the Internet shop logo (top right corner)" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(D:\IT\EVO\TA-Bootcamp-E2E-Zaitsava\features\bootcamp.feature):1:1
+                	at Scenario(Internet shop logo button):12:4
+                	at Step(clicks on the Internet shop logo (top right corner)):14:7
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1669623089760' status='pending' stop='1669623089761'>
+            <name>Then the User is on the mane page</name>
+            <title>Then the User is on the mane page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1669623089763' status='passed' stop='1669623089768'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,22 @@
+{
+  "name": "TA-Bootcamp-E2E-Zaitsava",
+  "version": "1.0.0",
+  "description": "E2E Tests Hometask",
+  "main": "bootcamp.js",
+  "repository": "git@github.com:alenita23/TA-Bootcamp-E2E-Zaitsava.git",
+  "author": "Elena Zayceva <alenita.zayceva@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@wdio/allure-reporter": "^7.26.0",
+    "@wdio/cli": "^7.27.0",
+    "@wdio/cucumber-framework": "^7.27.0",
+    "@wdio/local-runner": "^7.27.0",
+    "@wdio/spec-reporter": "^7.26.0",
+    "chromedriver": "^107.0.3",
+    "wdio-chromedriver-service": "^8.0.0"
+  },
+  "scripts": {
+    "test": "wdio run wdio.conf.js"
+  }
+}
