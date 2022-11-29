@@ -4,10 +4,13 @@ Feature: Bootcamp E2E
       Given The User is on the home page
       And the promo banner is closed if it appeared
 
-   Scenario: Search bar
-      When the User enters the word 'Windows' in the search bar
-      And clicks the search
+   Scenario Outline: Search bar
+      When the User enters the word '<word>' in the search bar
+      And the User clicks the search button
       Then at least one item appears in the search result
+      Examples:
+         | word        |
+         | Windows     |
 
    Scenario: Internet shop logo button
       When the User opens 'Today's Best Deals' tab

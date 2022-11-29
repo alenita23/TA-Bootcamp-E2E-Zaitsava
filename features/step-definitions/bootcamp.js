@@ -6,43 +6,33 @@ Given("The User is on the home page", async () => {
 
 Given("the promo banner is closed if it appeared", async () => {
    try {
-      const banner = await $('//*[@id="modal-Website"]/div[2]/div/div/a/img');
-      await banner.waitForExist({ timeout: 9000 });
-      const bannerCloseBtn = await $('//*[@id="modal-Website"]/div[2]/div/button');
-      await bannerCloseBtn.click();
-      await expect(banner).not.toBeDisplayed();
+      await $('//*[@class="close"]').click();
+      await expect(await $('//*[@class="modal-Website-img"]')).not.toBeDisplayed();
    } catch (error) {
       console.log('Promo banner is not displayed.');
    }
 });
 
-When("the User enters the word 'Windows' in the search bar", async () => {
-   const search = await $('input[type=search]');
-   await search.setValue("Windows");
+When('the User enters the word {string} in the search bar', async (word) => {
+   await $('input[type=search]').setValue(word);
 });
 
-When("clicks the search", async () => {
-   const searchBtn = await $('//*[@class="ico ico-search"]');
-   await searchBtn.click();
+When("the User clicks the search button", async () => {
+   await $('[class*="ico-search"]').click();
 });
 
 Then("at least one item appears in the search result", async () => {
-   const list = await $('//*[@id="app"]/div[3]/section/div/div/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div[2]');
+   const list = await $('div.list-wrap > div:nth-child(3)');
    await expect(list).toBeExisting();
    await expect(list).toHaveChildren({ gte: 1 });
 });
 
-
-
-
 When("the User opens 'Today's Best Deals' tab", async () => {
-   const bestDealTab = await $('//*[@id="trendingBanner_720202"]');
-   await bestDealTab.click();
+   await $('//*[@id="trendingBanner_720202"]').click();
 });
 
 When("clicks on the Internet shop logo", async () => {
-   const logo = await $('//*[@id="app"]/header/div[1]/div[1]/div[1]/div[2]/a');
-   await logo.click();
+   await $('//*[@class="header2021-logo-img"]').click();
 });
 
 Then("the User is on the main page", async () => {
