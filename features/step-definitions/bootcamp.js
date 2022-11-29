@@ -5,11 +5,14 @@ Given("The User is on the home page", async () => {
 });
 
 Given("the promo banner is closed if it appeared", async () => {
+   const promoTimeout = 9000;
    try {
-      await $('//*[@class="close"]').click();
+      const promoCloseBtn = await $('[class="close"]');
+      await promoCloseBtn.waitForDisplayed( {timeout: promoTimeout});
+      await promoCloseBtn.click();
       await expect(await $('//*[@class="modal-Website-img"]')).not.toBeDisplayed();
    } catch (error) {
-      console.log('Promo banner is not displayed.');
+      console.log(`Promo banner was not displayed within ${promoTimeout} ms.`);
    }
 });
 
@@ -22,8 +25,9 @@ When("the User clicks the search button", async () => {
 });
 
 Then("at least one item appears in the search result", async () => {
+   const listTimeout = 9000;
    const list = await $('div.list-wrap > div:nth-child(3)');
-   await expect(list).toBeExisting();
+   await list.waitForDisplayed({ timeout: listTimeout});
    await expect(list).toHaveChildren({ gte: 1 });
 });
 
