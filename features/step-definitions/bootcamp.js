@@ -10,7 +10,7 @@ Given("the promo banner is closed if it appeared", async () => {
       const promoCloseBtn = await $('[class="close"]');
       await promoCloseBtn.waitForDisplayed( {timeout: promoTimeout});
       await promoCloseBtn.click();
-      await $('//*[@class="modal-Website-img"]').waitForDisplayed({ reverse: true });;
+      await $('//*[@class="modal-Website-img"]').waitForDisplayed({ reverse: true });
    } catch (error) {
       console.log(`Promo banner was not displayed within ${promoTimeout} ms.`);
    }
